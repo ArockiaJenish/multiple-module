@@ -1,0 +1,35 @@
+<h3>Edit Product</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+        <div class="form-group col-6">
+            <form action="/">
+                <label for="id">ID:</label>
+                <input class="form-control" type="number" [disabled]="true" [value]="product.id"><br>
+                <label for="title">Title:</label>
+                <input class="form-control" type="text" name="title" [(ngModel)]="product.title"><br>
+                <label for="brand">Brand:</label>
+                <input class="form-control" type="text" name="brand" [(ngModel)]="product.brand"><br>
+                <label for="category">Category:</label>
+                <input class="form-control" type="text" name="category" [(ngModel)]="product.category"><br>
+                <label for="discount">Discount:</label>
+                <input class="form-control" type="text" name="discount" [(ngModel)]="product.discountPercentage"><br>
+                <label for="price">Price:</label>
+                <input class="form-control" type="number" name="price" [(ngModel)]="product.price"><br>
+                <label for="rating">Rating:</label>
+                <input class="form-control" type="text" name="rating" [(ngModel)]="product.rating"><br>
+                <label for="stock">Stock:</label>
+                <input class="form-control" type="text" name="stock" [(ngModel)]="product.stock"><br>
+            </form>
+            <img [src]="product.images[1]" alt="Product">
+
+            <button (click)="update()">Update</button>
+        </div>
+        <div class="col-3">
+
+        </div>
+    </div>
+</div>

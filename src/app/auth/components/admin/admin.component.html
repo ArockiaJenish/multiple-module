@@ -1,0 +1,36 @@
+<h1 class="text-danger">Admin Component</h1>
+
+<div class="container" *ngIf="product">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Discount</th>
+                <th>Price</th>
+                <th>Rating</th>
+                <th>Stock</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of product.products; index as i">
+                <td>{{i+1}}</td>
+                <td>{{p.id}}</td>
+                <td>{{p.title}}</td>
+                <td>{{p.brand}}</td>
+                <td>{{p.category}}</td>
+                <td>{{p.discountPercentage+"%"}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.rating}}</td>
+                <td>{{p.stock}}</td>
+                <td>{{p.description}}</td>
+                <td><button class="btn btn-primary" (click)="edit(p)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
